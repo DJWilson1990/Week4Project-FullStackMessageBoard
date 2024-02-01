@@ -8,6 +8,26 @@
     <title>FullStack Message board</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="form-container">
+      <h1>Start a conversation!</h1>
+      <form id="message-form">
+        <label for="username" id="username-label">ENTER USERNAME</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter username"
+          required
+        />
+        <label for="message" id="message-label">YOUR MESSAGE</label>
+        <textarea
+          name="message-content"
+          id="messageContent"
+          placeholder="Enter
+        your messaage here"
+          required
+        ></textarea>
+        <input type="submit" value="Send Message" />
+      </form>
+    </div>
   </body>
 </html>
