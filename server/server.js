@@ -24,6 +24,7 @@ app.post("/messageBoard", (req, res) => {
     const newMessage = db
       .prepare(`INSERT INTO messageBoard (username, message) VALUES(?, ?)`)
       .run(username, message);
+    res.status(200).json({ message: newMessage });
   } catch (err) {
     res.status(500).json({ error: err });
   }
