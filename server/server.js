@@ -28,3 +28,12 @@ app.post("/messageBoard", (req, res) => {
     res.status(500).json({ error: err });
   }
 });
+
+app.get("/messageBoard", (req, res) => {
+  try {
+    let messageBoard = db.prepare(`SELECT * FROM messageBoard`).all();
+    res.status(200).json(messageBoard);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
