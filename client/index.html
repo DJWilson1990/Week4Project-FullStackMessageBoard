@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
     <title>FullStack Message board</title>
   </head>
   <body>
@@ -15,6 +16,7 @@
         <input
           type="text"
           name="username"
+          id="username-input"
           placeholder="Enter username"
           required
         />
@@ -22,8 +24,7 @@
         <textarea
           name="message"
           id="message-content"
-          placeholder="Enter
-        your messaage here"
+          placeholder="Enter your message here"
           required
         ></textarea>
         <input type="submit" value="Send Message" id="submitBtn" />

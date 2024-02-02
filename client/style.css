@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Kanit:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Archivo Black", sans-serif;
+  color: rgb(173, 162, 162);
+}
+
+body {
+  background-color: rgb(16, 65, 67);
+  /* background-image: url("/imgs/p2png.png");
+  background-size: cover;
+  background-position: center; */
+  height: 100vh;
+  width: auto;
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  background-color: rgb(45, 101, 101);
+  margin: 50px;
+  border-radius: 20px;
+}
+
+#message-form {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  margin: 10px;
+}
+
+#username-input {
+  height: 50px;
+}
+
+#message-content {
+  height: 40vh;
+}
+
+#message-label,
+#username-label,
+#username-input,
+#message-content,
+#submitBtn {
+  margin-top: 10px;
+}
+
+#username-input,
+#message-content,
+#submitBtn {
+  width: 50vw;
+  color: black;
+}
+
+#submitBtn {
+  cursor: pointer;
+}
+
+ul {
+  margin-top: 50px;
+  list-style-type: none;
+}
+
+li {
+  background-color: rgb(202, 138, 115);
+  display: list-item;
+  color: black;
+}
+
+#message-list li {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
