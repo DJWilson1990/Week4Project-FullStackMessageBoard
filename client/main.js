@@ -1,4 +1,5 @@
-const baseURL = "http://localhost:2020";
+// const baseURL = "http://localhost:2020";
+const baseURL = "https://week4-message-client.onrender.com"; //can uncomment to use local host again. or use env(not done here)
 const messageForm = document.getElementById("message-form");
 const submitButton = document.getElementById("submitBtn");
 const messageList = document.getElementById("message-list");

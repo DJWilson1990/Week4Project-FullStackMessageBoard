@@ -17,6 +17,15 @@ app.get("/", (request, response) => {
 });
 //  Set up /\
 
+function seed() {
+  db.exec(`CREATE TABLE IF NOT EXISTS messageBoard (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT,
+        message TEXT    
+    )`);
+}
+//seed file /\
+
 app.post("/messageBoard", (req, res) => {
   try {
     const username = req.body.username;
@@ -27,6 +36,15 @@ app.post("/messageBoard", (req, res) => {
     res.status(200).json({ message: newMessage });
   } catch (err) {
     res.status(500).json({ error: err });
+  }
+});
+
+app.post("/seed", (req, res) => {
+  try {
+    seed();
+    res.status(200).json();
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
