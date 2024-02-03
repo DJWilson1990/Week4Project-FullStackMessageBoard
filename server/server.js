@@ -38,3 +38,15 @@ app.get("/messageBoard", (req, res) => {
     res.status(500).json(err);
   }
 });
+
+app.delete("/messageBoard/:id", (request, response) => {
+  try {
+    let id = request.params.id;
+    let deletedMessage = db
+      .prepare(`DELETE FROM messageBoard WHERE id = ?`)
+      .run(id);
+    response.status(200).json({ recordDeleted: deletedMessage });
+  } catch (err) {
+    response.status(500).json({ error: err.message });
+  }
+});
